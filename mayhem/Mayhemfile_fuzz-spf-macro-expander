@@ -1,0 +1,8 @@
+project: savantenvs/hmailserver
+target: fuzz-spf-macro-expander
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-spf-macro-expander/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-spf-macro-expander
+    libfuzzer: true
